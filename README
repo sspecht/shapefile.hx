@@ -1,0 +1,13 @@
+shapefile.hx - a port of Edwin van Rijkoms Shapefile ActionScript library to HaXe
+
+created by
+	Edwin van Rijkom
+	
+ported by
+    Sebastian Specht
+	with the help of as3hx
+
+the port is copyrighted under LGPL by
+    Leibniz Institute for Regional Geography,
+    Leipzig, Germany
+	2011
