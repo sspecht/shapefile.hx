@@ -1,0 +1,7 @@
+a log of changes made to the source code
+========================================
+
+as3hx issues
+
+- does not understand hexadecimals with a capital "X" like 0X0D
+- does not understand "[Event(" metatags

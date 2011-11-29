@@ -37,30 +37,30 @@ import flash.display.MovieClip;
  * the arhive.
  * @eventType flash.events.ProgressEvent.PROGRESS
  */	
-[Event(name="progress",type="flash.events.ProgressEvent")]
+// [Event(name="progress",type="flash.events.ProgressEvent")]
 /**
  * Dispatched when the loader is about the uncompress an item in 
  * the archive.
  * @eventType org.vanrijkom.far.FarEvent.ITEM_UNCOMPRESS
  */	
-[Event(name="farItemUncompress",type="org.vanrijkom.far.FarEvent")]
+// [Event(name="farItemUncompress",type="org.vanrijkom.far.FarEvent")]
 /**
  * Dispatched when the loader has finished uncompressing an item in
  * the archive.
  * @eventType flash.events.Event.COMPLETE
  */	
-[Event(name="complete",type="flash.events.Event")]
+// [Event(name="complete",type="flash.events.Event")]
 /**
  * Dispatched when the loader has fully finished loading and possibly
  * uncompressing an item from the archive.
  * @eventType org.vanrijkom.far.FarEvent.ITEM_COMPLETE
  */	
-[Event(name="farItemComplete",type="org.vanrijkom.far.FarEvent")]
+// [Event(name="farItemComplete",type="org.vanrijkom.far.FarEvent")]
 /**
  * Dispatched when an item was not found in the arhive's file table.
  * @eventType flash.events.IOErrorEvent.IO_ERROR  
  */
-[Event(name="ioError", type="flash.events.IOErrorEvent")]
+// [Event(name="ioError", type="flash.events.IOErrorEvent")]
 
 /**
  * The FarItem class represent an entry in a FAR file's file table.

@@ -29,7 +29,7 @@ import flash.geom.Point;
  * @author Edwin van Rijkom
  * 
  */	
-final public class ShpPolyline extends ShpPolygon
+public final class ShpPolyline extends ShpPolygon
 {
 	/**
 	 * Constructor.

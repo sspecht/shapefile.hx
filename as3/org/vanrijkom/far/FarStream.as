@@ -34,31 +34,31 @@ import flash.utils.Endian;
  * file table.
  * @eventType org.vanrijkom.far.FarEvent.TABLE_COMPLETE
  */	
-[Event(name="farTableComplete",type="org.vanrijkom.far.FarEvent")]
+// [Event(name="farTableComplete",type="org.vanrijkom.far.FarEvent")]
 /**
  * Dispatched when the loader is reading file data for an item in 
  * the arhive.
  * @eventType org.vanrijkom.far.FarEvent.ITEM_PROGRESS
  */	
-[Event(name="farItemProgress",type="org.vanrijkom.far.FarEvent")]
+// [Event(name="farItemProgress",type="org.vanrijkom.far.FarEvent")]
 /**
  * Dispatched when the loader is about the uncompress an item in 
  * the archive.
  * @eventType org.vanrijkom.far.FarEvent.ITEM_UNCOMPRESS
  */	
-[Event(name="farItemUncompress",type="org.vanrijkom.far.FarEvent")]
+// [Event(name="farItemUncompress",type="org.vanrijkom.far.FarEvent")]
 /**
  * Dispatched when the loader has finished uncompressing an item in
  * the archive.
  * @eventType org.vanrijkom.far.FarEvent.ITEM_UNCOMPRESSED
  */	
-[Event(name="farItemUncompressed",type="org.vanrijkom.far.FarEvent")]
+// [Event(name="farItemUncompressed",type="org.vanrijkom.far.FarEvent")]
 /**
  * Dispatched when the loader has fully finished loading and possibly
  * uncompressing an item from the archive.
  * @eventType org.vanrijkom.far.FarEvent.ITEM_COMPLETE
  */	
-[Event(name="farItemComplete",type="org.vanrijkom.far.FarEvent")]
+// [Event(name="farItemComplete",type="org.vanrijkom.far.FarEvent")]
 
 // -- URLStream native events:
 /**
@@ -66,37 +66,37 @@ import flash.utils.Endian;
  * operating system focus and becomes active.
  * @eventType flash.events.Event.ACTIVATE
  */
-[Event(name="activate", type="flash.events.Event")]
+// [Event(name="activate", type="flash.events.Event")]
 /**
  * <strong>URLStream:</strong> Dispatched when data has loaded 
  * successfully. 
  * @eventType flash.events.Event.COMPLETE 
  */
-[Event(name="complete", type="flash.events.Event")]
+// [Event(name="complete", type="flash.events.Event")]
 /**
  * <strong>EventDispatcher:</strong> Dispatched when Flash Player loses 
  * operating system focus and is becoming inactive.
  * @eventType flash.events.Event.DEACTIVATE
  */
-[Event(name="deactivate", type="flash.events.Event")]
+// [Event(name="deactivate", type="flash.events.Event")]
 /**
  * <strong>URLStream:</strong> Dispatched if a call to URLStream.load() 
  * attempts to access data over HTTP, and the current Flash Player 
  * is able to detect and return the status code for the request.
  * @eventType flash.events.HTTPStatusEvent.HTTP_STATUS 
  */
-[Event(name="httpStatus", type="flash.events.HTTPStatusEvent")]
+// [Event(name="httpStatus", type="flash.events.HTTPStatusEvent")]
 /**
  * <strong>URLStream:</strong> Dispatched when an input/output error
  * occurs that causes a load operation to fail.
  * @eventType flash.events.IOErrorEvent.IO_ERROR  
  */
-[Event(name="ioError", type="flash.events.IOErrorEvent")]
+// [Event(name="ioError", type="flash.events.IOErrorEvent")]
 /**
  * <strong>URLStream:</strong> Dispatched when a load operation starts.
  * @eventType flash.events.Event.OPEN
  */
-[Event(name="open", type="flash.events.Event")]
+// [Event(name="open", type="flash.events.Event")]
 /**
  * <strong>URLStream:</strong> Dispatched when data is received
  * as the download operation progresses. Data that has 
@@ -104,13 +104,13 @@ import flash.utils.Endian;
  * the URLStream class. 
  * @eventType flash.events.ProgressEvent.PROGRESS 
  */
-[Event(name="progress", type="flash.events.ProgressEvent")]
+// [Event(name="progress", type="flash.events.ProgressEvent")]
 /**
  * <strong>URLStream:</strong> Dispatched if a call to URLStream.load()
  * attempts to load data from a server outside the security sandbox. 
  * @eventType flash.events.SecurityErrorEvent.SECURITY_ERROR 
  */
-[Event(name="securityError", type="flash.events.SecurityErrorEvent")]
+// [Event(name="securityError", type="flash.events.SecurityErrorEvent")]
 
 /**
  * The FarStream class loads and parses FAR formatted archives created

@@ -121,7 +121,7 @@ public class DbfHeader
 		
 		// iterate field descriptors:
 		fields = [];
-		while (src.readByte() != 0X0D){
+		while (src.readByte() != 0x0D){
 			src.position--;
 			fields.push(new DbfField(src));
 		}
