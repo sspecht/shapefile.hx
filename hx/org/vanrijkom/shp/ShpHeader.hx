@@ -84,7 +84,11 @@ class ShpHeader {
 		// read shape-type:
 		shapeType = src.readInt();
 		// read bounds:
-		boundsXY = new Rectangle(src.readDouble(), src.readDouble(), src.readDouble(), src.readDouble());
+		var x1 = src.readDouble();
+		var y1 = src.readDouble();
+		var x2 = src.readDouble();
+		var y2 = src.readDouble();
+		boundsXY = new Rectangle(x1, y1, x2-x1, y2-y1);
 		boundsZ = new Point(src.readDouble(), src.readDouble());
 		boundsM = new Point(src.readDouble(), src.readDouble());
 	}

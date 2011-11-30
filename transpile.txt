@@ -5,3 +5,54 @@ as3hx issues
 
 - does not understand hexadecimals with a capital "X" like 0X0D
 - does not understand "[Event(" metatags
+- wow, running through
+
+further as3>haxe related changes to sourcecode
+
+- NaN > Math.NaN
+- UInt > Int
+
+SHP-Issues
+
+- fixed Rectangle Initialization
+
+=========================================
+
+dependencies upon flash api
+
+  ...from shp & dbf:
+
+flash.utils.ByteArray;	>	haxe.io.ByteInput
+						>	nme implementation
+flash.utils.Endian;		>	haxe.io.ByteInput
+						>	nme implementation
+flash.utils.Dictionary;	>	___Hash
+						>	nme is only a typedef for Flash
+flash.events.Event;		>	implement with Error/EventHandler like haxe.remoting
+						>	nme implementation
+Error					>	implement with Error/EventHandler like haxe.remoting
+						>	nme implementation
+flash.geom.Rectangle;	>	nme implementation
+flash.geom.Point;		>	nme implementation
+
+flash.display.Graphics;	>	ignorable, convenience method)
+
+  ...from Far (we may be able to ignore this)
+  
+flash.utils.ByteArray;
+flash.utils.Dictionary;
+flash.utils.Endian;
+flash.net.URLLoader;
+flash.net.URLRequest;
+flash.net.URLStream;
+flash.events.Event;
+flash.events.ProgressEvent;
+flash.events.EventDispatcher;
+flash.events.IOErrorEvent;
+flash.display.BitmapData;
+flash.display.Bitmap;
+flash.display.Loader;
+flash.display.MovieClip;
+flash.system.LoaderContext;
+flash.media.Sound;
+flash.geom.Point;

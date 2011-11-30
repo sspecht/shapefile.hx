@@ -34,12 +34,12 @@ class ShpPoint extends ShpObject {
 	 */
 	public var x : Float;
 	public var y : Float;
-	public function new(src : ByteArray = null, size : UInt = 0) {
+	public function new(src : ByteArray = null, size : Int = 0) {
 		type = ShpType.SHAPE_POINTZ;
-		if(src)  {
+		if(src!=null)  {
 			if(src.length - src.position < size) throw (new ShpError("Not a Point record (to small)"));
-			x = ((size > 0)) ? src.readDouble() : NaN;
-			y = ((size > 8)) ? src.readDouble() : NaN;
+			x = ((size > 0)) ? src.readDouble() : Math.NaN;
+			y = ((size > 8)) ? src.readDouble() : Math.NaN;
 		}
 	}
 

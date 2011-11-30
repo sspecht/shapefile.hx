@@ -22,6 +22,7 @@
  */
 // package
 package org.vanrijkom.shp;
+import flash.errors.Error;
 
 class ShpError extends Error {
 
@@ -34,6 +35,15 @@ class ShpError extends Error {
 	 * when a ByteArray runs out of data.
 	 */
 	static public var ERROR_NODATA : Int = 1;
+	
+	/**
+	 * "Fixing" weird Bug in NME on the cpp/windows target
+	 * @return
+	 */ 
+	public function errorIDfix():Int {
+		return errorID;
+	}
+	
 	/**
 	 * Constructor.
 	 * @param msg

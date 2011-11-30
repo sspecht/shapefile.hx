@@ -24,6 +24,7 @@
 // package
 package org.vanrijkom.shp;
 
+import flash.errors.Error;
 import flash.utils.ByteArray;
 import flash.display.Graphics;
 
@@ -46,7 +47,7 @@ class ShpTools {
 				records.push(record);
 			}
 			catch(e : ShpError) {
-				if(e.errorID == ShpError.ERROR_NODATA) break
+				if(e.errorIDfix() == ShpError.ERROR_NODATA) break
 				else throw (e);
 			}
 
@@ -67,9 +68,11 @@ class ShpTools {
 		var shp : ShpHeader = new ShpHeader(src);
 		if(shp.shapeType != ShpType.SHAPE_POLYGON && shp.shapeType != ShpType.SHAPE_POLYLINE) throw (new ShpError("Shapefile does not contain Polygon records (found type: " + shp.shapeType + ")"));
 		var records : Array<Dynamic> = ShpTools.readRecords(src);
-		var i : UInt;
-		for(var p : ShpRecord in records) {
-			for(var r : Array<Dynamic> in (try cast(p.shape, ShpPolygon) catch(e) null).rings) {
+		var i : Int;
+		var p : ShpRecord;
+		for (p in records) {
+			var r : Array<Dynamic>;
+			for(r in (try cast(p.shape, ShpPolygon) catch(e:Error) null).rings) {
 				if(r.length)  {
 					dest.moveTo(r[0].x * zoom, -r[0].y * zoom);
 				}

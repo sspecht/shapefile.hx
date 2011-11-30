@@ -47,30 +47,34 @@ class ShpPolygon extends ShpObject {
 	 * @return 
 	 * @throws ShpError Not a Polygon record
 	 */
-	public function new(src : ByteArray = null, size : UInt = 0) {
+	public function new(src : ByteArray = null, size : Int = 0) {
 		type = ShpType.SHAPE_POLYGON;
 		rings = [];
-		if(src)  {
-			if(src.length - src.position < size) throw (new ShpError("Not a Polygon record (to small)"));
+		if(src!=null)  {
+			if( (src.length - src.position) < Std.int(size) ) throw (new ShpError("Not a Polygon record (to small)"));
 			src.endian = Endian.LITTLE_ENDIAN;
-			box = new Rectangle(src.readDouble(), src.readDouble(), src.readDouble(), src.readDouble());
+			var x1 = src.readDouble();
+			var y1 = src.readDouble();
+			var x2 = src.readDouble();
+			var y2 = src.readDouble();
+			box = new Rectangle(x1, y1, x2-x1, y2-y1);
 			var rc : Int = src.readInt();
 			var pc : Int = src.readInt();
 			var ringOffsets : Array<Dynamic> = [];
-			while(rc--) {
+			while(rc-->0) {
 				ringOffsets.push(src.readInt());
 			}
 
 			var points : Array<Dynamic> = [];
-			while(pc--) {
+			while(pc-->0) {
 				points.push(new ShpPoint(src, 16));
 			}
 
 			// convert points, and ringOffsets arrays to an array of rings:
-			var removed : UInt = 0;
+			var removed : Int = 0;
 			var split : Int;
 			ringOffsets.shift();
-			while(ringOffsets.length) {
+			while(ringOffsets.length>0) {
 				split = ringOffsets.shift();
 				rings.push(points.splice(0, split - removed));
 				removed = split;

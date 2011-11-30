@@ -38,7 +38,7 @@ class ShpPolyline extends ShpPolygon {
 	 * @return 
 	 * 
 	 */
-	public function new(src : ByteArray = null, size : UInt = 0) {
+	public function new(src : ByteArray = null, size : Int = 0) {
 		super(src, size);
 		type = ShpType.SHAPE_POLYLINE;
 	}

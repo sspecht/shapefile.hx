@@ -45,7 +45,7 @@ class ShpRecord {
 	/**
 	 * Content length in bytes 
 	 */
-	public var contentLengthBytes : UInt;
+	public var contentLengthBytes : Int;
 	/**
 	 * Type of the Shape Object associated with this Record Header.
 	 * Should match one of the constant values defined in the ShpType class.
@@ -76,7 +76,7 @@ class ShpRecord {
 		contentLength = src.readInt();
 		contentLengthBytes = contentLength * 2 - 4;
 		src.endian = Endian.LITTLE_ENDIAN;
-		var shapeOffset : UInt = src.position;
+		var shapeOffset : Int = src.position;
 		shapeType = src.readInt();
 		switch(shapeType) {
 		case ShpType.SHAPE_POINT:

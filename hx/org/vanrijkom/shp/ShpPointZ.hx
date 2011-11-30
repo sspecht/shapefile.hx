@@ -35,7 +35,7 @@ class ShpPointZ extends ShpPoint {
 	/**
 	 * M value (measure)
 	 */
-	public var m : Int;
+	public var m : Float;
 	// Measure;
 	/**
 	 * Constructor
@@ -44,12 +44,12 @@ class ShpPointZ extends ShpPoint {
 	 * @return	 
 	 * 
 	 */
-	public function new(src : ByteArray = null, size : UInt = 0) {
+	public function new(src : ByteArray = null, size : Int = 0) {
 		super();
 		type = ShpType.SHAPE_POINT;
-		if(src)  {
-			z = ((size > 16)) ? src.readDouble() : NaN;
-			m = ((size > 24)) ? src.readDouble() : NaN;
+		if(src!=null)  {
+			z = ((size > 16)) ? src.readDouble() : Math.NaN;
+			m = ((size > 24)) ? src.readDouble() : Math.NaN;
 		}
 	}
 
