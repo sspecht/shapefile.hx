@@ -69,6 +69,7 @@ class ShpHeader {
 	 * 
 	 */
 	public function new(src : ByteArray) {
+		if (src == null) throw (new ShpError("Shapefile is empty")); 
 		// endian:
 		src.endian = Endian.BIG_ENDIAN;
 		// check length:
